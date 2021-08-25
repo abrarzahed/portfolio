@@ -1,5 +1,5 @@
-$primary-color: #100E17;
-$secondary-color: #E52F6F;
+$primary-color: #1d1d1d;
+$secondary-color: #ff9f1a;
 $show-home-image: true;
 $home-image: url(../img/1.jpe);
 $background-opacity: 0.9;
@@ -16,7 +16,7 @@ $background-opacity: 0.9;
       background-size: cover;
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
@@ -33,9 +33,7 @@ $background-opacity: 0.9;
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
     @return #000;
-  }
-
-  @else {
+  } @else {
     @return #fff;
   }
 }

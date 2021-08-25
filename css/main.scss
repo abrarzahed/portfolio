@@ -88,18 +88,16 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "bioimage bio bio bio"
+    "job1 job2 job3 job4";
 
   .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: auto;
 
     img {
       width: 100%;
@@ -123,6 +121,9 @@ main {
   .job-3 {
     grid-area: job3;
   }
+  .job-4 {
+    grid-area: job4;
+  }
 
   .job {
     background: lighten($primary-color, 5);
@@ -130,9 +131,11 @@ main {
     border-bottom: $secondary-color 5px solid;
     display: grid;
     place-items: center;
+    height: 300px;
 
     h3 {
-      font-size: 30px;
+      font-size: 20px;
+      text-align: center;
     }
     h4 {
       font-size: 60px;
@@ -149,6 +152,9 @@ main {
   img {
     width: 100%;
     border: 3px #fff solid;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
 
     &:hover {
       opacity: 0.5;
@@ -171,6 +177,7 @@ main {
     border: 3px #fff solid;
     padding: 1.3rem;
     margin-bottom: 3rem;
+    border-radius: 12px;
     // @include easeout;
 
     // &:hover {
@@ -184,7 +191,7 @@ main {
   }
   .small {
     font-size: 1.2rem;
-    padding: 1rem;
+    // padding: 1.3rem;
     // &:hover {
     //   padding: 0.5rem;
     // }
@@ -192,12 +199,11 @@ main {
       font-size: 1.8rem;
     }
   }
-  .email{
-    border: none;
+  .email {
+    // border: none;
     font-size: 1.5rem;
   }
 }
-
 
 // Button Styles
 .btn {
